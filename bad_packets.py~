@@ -1,0 +1,7 @@
+#!/usr/bin/python
+
+# bad hlen
+pkt = IP(dst="www.slashdot.org", ihl=4)/ICMP()/"XXXXXXXXXXX")
+sendp(pkt)
+
+
