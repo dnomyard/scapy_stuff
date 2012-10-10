@@ -16,7 +16,7 @@ send(pkt2)
 
 
 # 2 fragments from chain with no first fragment (offset = 0)
-syn = IP(dst="www.cnn.com") / TCP(sport=46667, dport=80, flags='S')
+syn = IP(dst="www.cnn.com") / TCP(sport=46667, dport=80, flags='S', seq=42)
 print syn
 
 syn_ack = sr1(syn)
